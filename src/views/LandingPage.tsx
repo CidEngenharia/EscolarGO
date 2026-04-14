@@ -40,7 +40,7 @@ export function LandingPage({ onLogin }: { onLogin: () => void }) {
       {/* Navigation */}
       <nav className="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
         <div className="flex items-center">
-          <img src="/EscolarGO1.fw.png" alt="EscolarGO Logo" className="h-14 w-auto object-contain" />
+          <img src="/EscolarGO1.fw.png" alt="EscolarGO Logo" className="h-20 w-auto object-contain" />
         </div>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
@@ -57,12 +57,16 @@ export function LandingPage({ onLogin }: { onLogin: () => void }) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
+          <div className="mb-12">
+            <img src="/EscolarGO1.fw.png" alt="EscolarGO Logo" className="h-40 w-auto object-contain" />
+          </div>
           <Badge className="bg-yellow-100 text-yellow-700 hover:bg-yellow-100 border-none px-4 py-1 mb-6">
             ✨ O Futuro do Transporte Escolar
           </Badge>
           <h1 className="text-6xl lg:text-7xl font-black text-slate-900 leading-[0.9] tracking-tighter mb-6">
             Segurança e <span className="text-yellow-500">Tranquilidade</span> em cada trajeto.
           </h1>
+
           <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-lg">
             A plataforma SaaS definitiva para motoristas escolares. Monitore rotas, comunique-se com os pais e gerencie sua frota com tecnologia de ponta.
           </p>
@@ -294,9 +298,9 @@ export function LandingPage({ onLogin }: { onLogin: () => void }) {
           <div>
             <h4 className="font-bold mb-6">Suporte</h4>
             <ul className="space-y-4 text-sm text-slate-400">
-              <li><a href="#" className="hover:text-white transition-colors">Ajuda</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contato</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Termos</a></li>
+              <li className="font-bold">Developer</li>
+              <li>CidEngenharia</li>
+              <li>Sidney Sales</li>
             </ul>
           </div>
         </div>
