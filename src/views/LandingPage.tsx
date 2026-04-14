@@ -19,21 +19,12 @@ import { Badge } from '@/components/ui/badge';
 import { useAppContext } from '@/context/AppContext';
 import { cn } from '@/lib/utils';
 
-export function LandingPage({ onLogin }: { onLogin: () => void }) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const { setRole } = useAppContext();
+interface LandingPageProps {
+  onGoToLogin: () => void;
+}
 
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Test login logic
-    if (email === 'teste@escolargo.com' && password === '123456') {
-      setRole('ADMIN');
-      onLogin();
-    } else {
-      alert('Login de teste: teste@escolargo.com / 123456');
-    }
-  };
+export function LandingPage({ onGoToLogin }: LandingPageProps) {
+  const { setRole } = useAppContext();
 
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-yellow-200">
@@ -46,7 +37,12 @@ export function LandingPage({ onLogin }: { onLogin: () => void }) {
         <div className="flex items-center gap-8 text-sm font-semibold text-slate-600">
           <a href="#features" className="hover:text-slate-900 transition-colors hidden md:block">Funcionalidades</a>
           <a href="#pricing" className="hover:text-slate-900 transition-colors hidden md:block">Planos</a>
-          <a href="#login" className="bg-slate-900 text-white px-6 py-2.5 rounded-full hover:bg-slate-800 transition-all">Entrar</a>
+          <button 
+            onClick={onGoToLogin}
+            className="bg-slate-900 text-white px-6 py-2.5 rounded-full hover:bg-slate-800 transition-all cursor-pointer"
+          >
+            Entrar
+          </button>
         </div>
       </nav>
 
@@ -230,49 +226,6 @@ export function LandingPage({ onLogin }: { onLogin: () => void }) {
         </div>
       </section>
 
-      {/* Login Section */}
-      <section id="login" className="bg-yellow-400 py-24 px-8">
-        <div className="max-w-xl mx-auto bg-white p-10 rounded-[40px] shadow-2xl">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-black text-slate-900 mb-2">Acesse sua conta</h2>
-            <p className="text-slate-500 text-sm">Use os dados de teste para explorar a plataforma.</p>
-          </div>
-
-          <form onSubmit={handleLogin} className="space-y-6">
-            <div className="space-y-2">
-              <label className="text-xs font-bold text-slate-900 uppercase tracking-wider">E-mail</label>
-              <Input 
-                type="email" 
-                placeholder="teste@escolargo.com" 
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="h-12 rounded-xl border-slate-200 focus:ring-yellow-400"
-              />
-            </div>
-            <div className="space-y-2">
-              <label className="text-xs font-bold text-slate-900 uppercase tracking-wider">Senha</label>
-              <Input 
-                type="password" 
-                placeholder="••••••" 
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="h-12 rounded-xl border-slate-200 focus:ring-yellow-400"
-              />
-            </div>
-            <Button type="submit" className="w-full h-14 bg-slate-900 text-white hover:bg-slate-800 rounded-xl font-bold text-lg">
-              Entrar na Plataforma
-            </Button>
-          </form>
-
-          <div className="mt-8 p-4 bg-slate-50 rounded-2xl border border-slate-100">
-            <p className="text-[10px] font-bold text-slate-400 uppercase mb-2">Acesso de Teste</p>
-            <div className="flex justify-between text-xs">
-              <span className="text-slate-600">E-mail: <span className="font-bold text-slate-900">teste@escolargo.com</span></span>
-              <span className="text-slate-600">Senha: <span className="font-bold text-slate-900">123456</span></span>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-slate-900 text-white py-20 px-8">

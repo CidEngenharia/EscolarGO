@@ -11,10 +11,11 @@ import { AdminDashboard } from './views/AdminDashboard';
 import { DriverDashboard } from './views/DriverDashboard';
 import { ParentDashboard } from './views/ParentDashboard';
 import { LandingPage } from './views/LandingPage';
+import { Login } from './views/Login';
 
 function DashboardContent() {
   const { role } = useAppContext();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [currentView, setCurrentView] = useState<'landing' | 'login' | 'dashboard'>('landing');
 
   const renderDashboard = () => {
     switch (role) {
@@ -29,9 +30,19 @@ function DashboardContent() {
     }
   };
 
-  if (!isLoggedIn) {
-    return <LandingPage onLogin={() => setIsLoggedIn(true)} />;
+  if (currentView === 'landing') {
+    return <LandingPage onGoToLogin={() => setCurrentView('login')} />;
   }
+
+  if (currentView === 'login') {
+    return (
+      <Login 
+        onLogin={() => setCurrentView('dashboard')} 
+        onBack={() => setCurrentView('landing')} 
+      />
+    );
+  }
+
 
   return (
     <div className="flex h-screen bg-slate-50 overflow-hidden font-sans">
