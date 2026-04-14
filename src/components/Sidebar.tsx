@@ -40,12 +40,12 @@ export function Sidebar() {
 
   return (
     <div className="w-64 bg-slate-900 text-white h-screen flex flex-col border-r border-slate-800">
-      <div className="p-6 flex items-center gap-3">
-        <div className="w-10 h-10 bg-yellow-400 rounded-xl flex items-center justify-center">
-          <Bus className="text-slate-900" size={24} />
+      <div className="p-6">
+        <div className="bg-white/10 p-2 rounded-xl">
+          <img src="/EscolarGO1.fw.png" alt="EscolarGO Logo" className="h-12 w-auto object-contain brightness-110" />
         </div>
-        <span className="text-xl font-bold tracking-tight">EscolarGo</span>
       </div>
+
 
       <nav className="flex-1 px-4 space-y-2">
         <div className="mb-4 px-2">

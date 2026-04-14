@@ -39,12 +39,10 @@ export function LandingPage({ onLogin }: { onLogin: () => void }) {
     <div className="min-h-screen bg-white font-sans selection:bg-yellow-200">
       {/* Navigation */}
       <nav className="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
-        <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-yellow-400 rounded-xl flex items-center justify-center">
-            <Bus className="text-slate-900" size={24} />
-          </div>
-          <span className="text-2xl font-black tracking-tighter text-slate-900">EscolarGo</span>
+        <div className="flex items-center">
+          <img src="/EscolarGO1.fw.png" alt="EscolarGO Logo" className="h-14 w-auto object-contain" />
         </div>
+
         <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
           <a href="#features" className="hover:text-slate-900 transition-colors">Funcionalidades</a>
           <a href="#pricing" className="hover:text-slate-900 transition-colors">Planos</a>
@@ -277,12 +275,10 @@ export function LandingPage({ onLogin }: { onLogin: () => void }) {
       <footer className="bg-slate-900 text-white py-20 px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-yellow-400 rounded-lg flex items-center justify-center">
-                <Bus className="text-slate-900" size={18} />
-              </div>
-              <span className="text-xl font-bold tracking-tighter">EscolarGo</span>
+            <div className="mb-6">
+              <img src="/EscolarGO1.fw.png" alt="EscolarGO Logo" className="h-12 w-auto object-contain brightness-0 invert" />
             </div>
+
             <p className="text-slate-400 max-w-sm leading-relaxed">
               Transformando o transporte escolar em uma experiência segura, conectada e eficiente para todos.
             </p>
