@@ -38,34 +38,32 @@ export function LandingPage({ onLogin }: { onLogin: () => void }) {
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-yellow-200">
       {/* Navigation */}
-      <nav className="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
-        <div className="flex items-center">
-          {/* Logo removed from here to avoid duplication */}
+      <nav className="flex items-center justify-between px-8 py-2 max-w-7xl mx-auto">
+        <div className="flex items-center -ml-4">
+          <img src="/EscolarGO1.fw.png" alt="EscolarGO Logo" className="h-48 w-auto object-contain" />
         </div>
 
-        <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-          <a href="#features" className="hover:text-slate-900 transition-colors">Funcionalidades</a>
-          <a href="#pricing" className="hover:text-slate-900 transition-colors">Planos</a>
+        <div className="flex items-center gap-8 text-sm font-semibold text-slate-600">
+          <a href="#features" className="hover:text-slate-900 transition-colors hidden md:block">Funcionalidades</a>
+          <a href="#pricing" className="hover:text-slate-900 transition-colors hidden md:block">Planos</a>
           <a href="#login" className="bg-slate-900 text-white px-6 py-2.5 rounded-full hover:bg-slate-800 transition-all">Entrar</a>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="px-8 py-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="px-8 pt-4 pb-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="mb-8">
-            <img src="/EscolarGO1.fw.png" alt="EscolarGO Logo" className="h-64 w-auto object-contain -ml-4" />
-          </div>
           <Badge className="bg-yellow-100 text-yellow-700 hover:bg-yellow-100 border-none px-4 py-1 mb-6">
             ✨ O Futuro do Transporte Escolar
           </Badge>
           <h1 className="text-6xl lg:text-7xl font-black text-slate-900 leading-[0.9] tracking-tighter mb-6 uppercase">
             Segurança e <span className="text-yellow-500">Tranquilidade</span> em cada trajeto.
           </h1>
+
 
 
           <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-lg">
