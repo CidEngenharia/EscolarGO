@@ -41,9 +41,10 @@ export function Sidebar() {
   return (
     <div className="w-64 bg-slate-900 text-white h-screen flex flex-col border-r border-slate-800">
       <div className="p-6">
-        <div className="bg-white/10 p-2 rounded-xl">
-          <img src="/EscolarGO1.fw.png" alt="EscolarGO Logo" className="h-12 w-auto object-contain brightness-110" />
+        <div className="bg-white/10 p-4 rounded-xl flex justify-center">
+          <img src="/EscolarGO1.fw.png" alt="EscolarGO Logo" className="h-24 w-auto object-contain brightness-110" />
         </div>
+
       </div>
 
 
