@@ -1,0 +1,5 @@
+{
+  "name": "EscolarGo - Transporte Escolar Inteligente",
+  "description": "Plataforma SaaS para gestão de transporte escolar com monitoramento em tempo real, comunicação entre pais e motoristas, e gestão de rotas.",
+  "requestFramePermissions": ["geolocation"]
+}
