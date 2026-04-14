@@ -96,10 +96,10 @@ export function LandingPage({ onLogin }: { onLogin: () => void }) {
           className="relative"
         >
           <div className="absolute -inset-4 bg-yellow-400/20 rounded-[40px] blur-3xl"></div>
-          <div className="relative bg-slate-900 rounded-[40px] p-4 shadow-2xl border-8 border-slate-800">
+          <div className="relative p-4 flex items-center justify-center">
             <img 
               src="/bus_go.png" 
-              className="rounded-[32px] w-full h-auto object-cover" 
+              className="w-full h-auto object-contain drop-shadow-2xl" 
               alt="App Preview" 
             />
 
